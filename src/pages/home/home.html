@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="danger">
+
+    <ion-title>
+      Bem vindo!
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img src='./assets/img/Logo.png' height="180px" >
+
+  <form [formGroup]="registro">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Usuario</ion-label>
+        <ion-input type='text' formControlName="Usuario" name="Usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Senha</ion-label>
+        <ion-input type="password" formControlName="Senha" name='Senha'></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block color="danger" (click)='submit()' [disabled]="!registro.valid">Entrar</button>
+  </form>
+</ion-content>
